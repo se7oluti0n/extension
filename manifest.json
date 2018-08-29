@@ -2,7 +2,7 @@
   "name": "Getting Started Example",
   "version": "1.0",
   "description": "Build an Extension!",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "permissions": ["activeTab", "declarativeContent", "storage", "fileSystem"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
@@ -19,9 +19,9 @@
   
   "content_scripts": [
     {
-      "matches": ["https://developer.chrome.com/*"],
-      "run_at": "document_start",
-      "js": ["content.js"]
+      "matches": ["https://ieyasu.co/works"],
+      "run_at": "document_end",
+      "js": ["jquery-3.3.1.min.js", "content.js"]
     }
   ],
   "icons": {
