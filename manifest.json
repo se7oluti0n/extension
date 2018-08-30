@@ -19,7 +19,7 @@
   
   "content_scripts": [
     {
-      "matches": ["https://ieyasu.co/works"],
+      "matches": ["https://ieyasu.co/works", "https://ieyasu.co/works/*"],
       "run_at": "document_end",
       "js": ["jquery-3.3.1.min.js", "content.js"]
     }
