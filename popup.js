@@ -23,10 +23,6 @@ let changeColor = document.getElementById('changeColor');
                    + day['end2'] + '\n');
         }
 
-        //pageList = document.getElementById('csv_content');
-       // pageList.innerHTML = csv_text;
-
-        var result = JSON.stringify(response.data);
 
     // Save as file
         var url = 'data:text/plain;base64,' + btoa(csv_text);
