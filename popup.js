@@ -12,14 +12,14 @@ let changeColor = document.getElementById('changeColor');
       chrome.tabs.sendMessage(tabs[0].id, {message: "getData"}, function(response) {
         console.log(response.data);
 
-        var csv_text = 'Date, start1, start2, end1, end2\n';
+        var csv_text = 'Date,start1,start2,end1,end2\n';
 
         for (var i = 0; i < response.data.length; ++i) {
           day = response.data[i]
           console.log(day);
-          csv_text += (day['date'] + ', ' + day['start1'] + ', '
-                   + day['start2'] + ', '
-                   + day['end1'] + ', '
+          csv_text += (day['date'] + ',' + day['start1'] + ','
+                   + day['start2'] + ','
+                   + day['end1'] + ','
                    + day['end2'] + '\n');
         }
 
