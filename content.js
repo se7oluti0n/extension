@@ -19,9 +19,15 @@ chrome.runtime.onMessage.addListener(
         end2 = row.cells[3].children[1].innerText;
         csv.push({date: date, start1: start1, start2: start2, end1: end1, end2: end2});
       }
+
+      personTable = $('.typePerson tr');
+      personName = personTable[1].cells[1].innerText;
+
+      monthSelect = $('#select :selected');
+      month = monthSelect[0].innerText;
       
       console.log(sendResponse);
-      sendResponse({data: csv});
+      sendResponse({data: csv, person: personName, time: month});
     }
 
 

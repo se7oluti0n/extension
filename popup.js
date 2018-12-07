@@ -23,12 +23,15 @@ let changeColor = document.getElementById('changeColor');
                    + day['end2'] + '\n');
         }
 
+        personName = response.person;
+        time = response.time;
+
 
     // Save as file
         var url = 'data:text/plain;base64,' + btoa(csv_text);
         chrome.downloads.download({
             url: url,
-            filename: 'timesheet.csv'
+            filename: 'timesheet_' + personName + '_' + time +  '.csv'
         });
         
       });
